@@ -1,16 +1,61 @@
-# React + Vite
+# 👟 KICKS VAULT — Telegram Mini App 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**KICKS VAULT** — это коммерческое веб-приложение (Telegram Mini App / WebApp) для закрытого концепт-стора лимитированных кроссовок в эстетике StockX и GOAT. Проект сочетает полноценный e-commerce функционал, встроенную геймификацию для удержания пользователей (Retention) и мгновенную отправку заказов напрямую владельцу в Telegram через Bot API.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://kicks-vault-tma.netlify.app/](https://kicks-vault-tma.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ⚡ Ключевой функционал
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🛒 1. E-Commerce витрина и Чекаут
+* **Живой поиск и фильтрация:** Мгновенный поиск по моделям, брендам и колорвеям без перезагрузки страницы.
+* **Карточки товаров:** Выбор актуальной размерной сетки (EU), индикация статуса (In Stock / Limited Drop / Grails).
+* **Избранное (Wishlist):** Сохранение редких пар в персональный список желаний.
+* **Умная корзина и Доставка:** Расчет итоговой суммы с выбором логистики (ПВЗ СДЭК или экспресс-курьер до двери).
+* **Интеграция с Telegram Bot API:** Формирование детализированного чека заказа (позиции, размеры, контакты, способ доставки, примененные привилегии) и моментальная отправка лида в личные сообщения менеджеру/владельцу или в закрытую группу.
 
-## Expanding the ESLint configuration
+### 🔐 2. Система лояльности «Сейф Привилегий» (Vault Pass)
+Реалистичная механика вовлечения и фарминга бонусных поинтов (**PTS**) внутри приложения (цель — **500 PTS**):
+* **Ежедневный майнинг (Tap-механика):** Сбор поинтов со строгим дневным лимитом кликов (защита от инфляции баллов).
+* **Социальные задания (Quests):** Начисление PTS за подписку на Telegram-канал бренда и приглашение друзей (реферальная механика).
+* **3 уровня наград (Tiers):**
+  * **Tier 1:** Бесплатный профессиональный *Legit Check* ($0 вместо стандартной комиссии).
+  * **Tier 2:** Бесплатная *Экспресс-доставка* ($0) на следующий заказ.
+  * **Tier 3:** Закрытый *VIP-статус* и постоянная скидка **-7%** на весь ассортимент.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Технологический стек
+* **Frontend:** React 18, Vite, JavaScript (ES6+)
+* **Стилизация:** Кастомный модульный CSS, Mobile-First адаптив под интерфейс Telegram WebApp (цветовая палитра: глубокий графит `#0f0f11` + кислотный лайм `#d4ff00`)
+* **Интеграции:** Telegram Bot API (REST) для обработки транзакций и заявок в реальном времени
+* **Деплой:** Netlify CI/CD
+
+---
+
+## 🚀 Быстрый запуск проекта локально
+
+1. Клонируйте репозиторий:
+   git clone https://github.com/Xtroksis/kicks-vault-tma.git
+   cd kicks-vault-tma
+
+2. Установите зависимости:
+   npm install
+
+3. Создайте файл `.env` в корне проекта и укажите данные вашего бота:
+   VITE_TELEGRAM_BOT_TOKEN=ваш_токен_от_BotFather
+   VITE_OWNER_CHAT_ID=ваш_telegram_chat_id
+
+4. Запустите локальный сервер разработки:
+   npm run dev
+
+---
+
+## 💼 Коммерческое применение (Для бизнеса)
+Данное решение идеально подходит для:
+* Сникер-сторов, ресейл-площадок и брендов уличной одежды (Streetwear).
+* Товарного бизнеса в Telegram, желающего перейти от неудобных текстовых постов к полноценному каталогу с корзиной.
+* Проектов, которым необходима геймификация (Click-to-Earn / Loyalty Pass) для повышения конверсии в покупку без затрат на сложный бэкенд.
+
+👨‍💻 **Разработка:** [Xtroksis](https://github.com/Xtroksis)
